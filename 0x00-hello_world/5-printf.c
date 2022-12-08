@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- *  * main - Print a string
+ *  * main - Program that prints exactly with proper grammar, but the outcome is a piece of art
  *   * Description: use printf
  *    * Return: 0
- *     */
+ */
 
 int main(void)
 {
