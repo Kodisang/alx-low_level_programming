@@ -2,7 +2,7 @@
 
 /**
  *  * main - Entry point
- *   * Prints exactly  "\"Programming is like building a multilingual puzzle"
+ *   *Print exactly "\"Programming is like building a multilingual puzzle"
  *    * Return: 0
  *     */
 
