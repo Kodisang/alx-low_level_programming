@@ -1,11 +1,11 @@
 #include <stdio.h>
-
 /**
  *  * main - prints to string
- *   * Description: Program that prints exactly and that piece of art is useful
- *    * Return: 1
+ *   *
+ *    * Description: Prints "and that piece of art is useful..."
+ *     *
+ *      * Return: 1
  */
-
 int main(void)
 {
 	char *s = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
@@ -19,6 +19,5 @@ int main(void)
 			"D" (fd),
 			"S" (s),
 			"d" (l));
-
 	return (1);
 }
