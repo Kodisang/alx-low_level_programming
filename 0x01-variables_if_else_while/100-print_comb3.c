@@ -1,0 +1,30 @@
+#include <stdio.h>
+/**
+ * main - main block
+ * Description: Print all possible combinations of two digits.
+ * Print numbers in ascending order
+ * Only use putchar and 5 times
+ * Don't use char
+ * Return: 0
+ */
+int main(void)
+{
+	int i, j, k;
+
+	i = 0;
+
+	while (i < 100)
+	{
+		j = i % 10; /* singles digit */
+		k = i / 10; /* doubles digit */
+
+		if (k < j)
+		{
+			putchar(44);
+			putchar(32);
+		}
+	}
+	putchar('\n');
+
+	return (0);
+}
