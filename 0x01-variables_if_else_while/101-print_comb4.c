@@ -4,6 +4,7 @@
  * Description: Print all possible different combinations of 3 digits.
  * Numbers must be separated by commas and a space.
  * 3 digits must be different.
+ * Return: 0
  */
 int main(void)
 {
