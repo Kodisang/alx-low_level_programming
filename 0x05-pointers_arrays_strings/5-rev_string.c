@@ -9,10 +9,17 @@
 
 void rev_string(char *s)
 {
-	char s[10] = "main.h"
+	int l, i;
+	char ch;
 
-		printf("%s\n", s);
-	rev_string(s);
-	printf("%s\n", s);
-	return (0);
+	for (l = 0; s[l] != '\0'; ++l)
+		;
+
+	for (i = 0; i < l / 2; ++i)
+
+	{
+		ch = s[i];
+		s[i] = s[l - 1 - i];
+		s[l - 1 - i] = ch;
+	}
 }
