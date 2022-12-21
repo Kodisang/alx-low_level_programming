@@ -7,11 +7,11 @@
  */
 int main(void)
 {
+	int sum;
 	char c;
-	int x;
 
-	srand(time(0));
-	while (x <= 2645)
+	srand(time(NULL));
+	while (sum <= 2645)
 	{
 		c = rand() % 128;
 		x += c;
