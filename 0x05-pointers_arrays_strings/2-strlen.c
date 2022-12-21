@@ -6,11 +6,11 @@
  * Return: returns lenght;
  */
 
-int main(void)
+int _strlen(char *s)
 {
-	char *str;
+	int length = 0;
 
-	str = "I do not fear computers. i fear the lack of them - isaac Asimov";
-	_puts(str);
-	return (0);
+	while (s[length])
+		length++;
+	return (length);
 }
