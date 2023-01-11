@@ -1,44 +1,67 @@
 #include "main.h"
-#include <stdlib.h>
+/**
+ * _strlen - count array
+ * @s: array of elements
+ * Return: 1
+ */
+
+int _strlen(char *s)
+{
+	unsigned int i;
+
+	i = 0;
+	while (s[i] != '\0') /*count character of string*/
+	{
+		i++;
+	}
+
+	return (i);
+}
+/**
+ * _strcpy - copy arrays
+ * @src: array of elements
+ * @dest: dest array
+ * Return: dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
 
 /**
- * Concatenates all arguments of the program into a string;
- * arguments are separated by a new line in the string.
- * @ac: The number of arguments passed to the program.
- * @av: An array of pointers to the arguments.
- * Return: If ac == 0, av == NULL, or the function fails - NULL.
- * Otherwise - a pointer to the new string.
+ * _strdup - array for prints a string
+ * @str: array of elements
+ * Return: pointer
  */
-char *argstostr(int ac, char **av)
+
+char *_strdup(char *str)
 {
-	char *str;
-	int arg, byte, index, size = ac;
+	char *dst;
+	unsigned int size;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
-
-	for (arg = 0; arg < ac; arg++)
+	if (str == 0)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			size++;
+		return (NULL);
 	}
 
-	str = malloc(sizeof(char) * size + 1);
+	size = _strlen(str) + 1;
 
-	if (str == NULL)
-		return (NULL);
+	dst = (char *) malloc(size * sizeof(char));
 
-	index = 0;
-
-	for (arg = 0; arg < ac; arg++)
+	if (dst == 0)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			str[index++] = av[arg][byte];
-
-		str[index++] = '\n';
+		return (NULL);
 	}
-
-	str[size] = '\0';
-
-	return (str);
+	_strcpy(dst, str);
+	return (dst);
 }
